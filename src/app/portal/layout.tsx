@@ -1,6 +1,6 @@
-import Header from "@/app/portal/ui/Header";
-import Navbar from "@/app/portal/ui/Navbar";
-import Footer from "@/app/portal/ui/Footer";
+import Header from "@/app/(app)/ui/Header";
+import Navbar from "@/app/(app)/ui/Navbar";
+import Footer from "@/app/(app)/ui/Footer";
 import { Viewport } from 'next'
 
 export const viewport: Viewport  = {
