@@ -62,7 +62,6 @@ export default function RootLayout({
   return (
       <html lang="fr">
       <body id="top">
-      {/*<div className="page_loader"></div>*/}
       {children}
       
       <Script src="/assets/js/jquery-2.2.0.min.js"/>

@@ -1,4 +1,5 @@
 import Header from "@/app/(app)/ui/Header";
+import Footer from "@/app/(app)/ui/Footer";
 export default function PortalLayout({
   children,
 }: {
@@ -8,6 +9,7 @@ export default function PortalLayout({
       <>
           <Header/>
           {children}
+          <Footer />
       </>
   )
 }

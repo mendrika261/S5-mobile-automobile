@@ -68,17 +68,18 @@ export default function HomeBanner() {
                 </div>
                 <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button"
                    data-slide="prev">
-            <span className="slider-mover-left" aria-hidden="true">
-                <i className="fa fa-angle-left"></i>
-            </span>
+                    <span className="slider-mover-left" aria-hidden="true">
+                        <i className="fa fa-angle-left"></i>
+                    </span>
                 </a>
                 <a className="carousel-control-next" href="#carouselExampleIndicators" role="button"
                    data-slide="next">
-            <span className="slider-mover-right" aria-hidden="true">
-                <i className="fa fa-angle-right"></i>
-            </span>
+                    <span className="slider-mover-right" aria-hidden="true">
+                        <i className="fa fa-angle-right"></i>
+                    </span>
                 </a>
             </div>
         </div>
     )
 }
+

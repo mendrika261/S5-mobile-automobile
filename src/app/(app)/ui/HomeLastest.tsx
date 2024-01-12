@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function HomeLatest() {
     return (
@@ -15,26 +16,26 @@ export default function HomeLatest() {
                             <div className="slick-slide-item">
                                 <div className="car-box-4">
                                     <div className="car-thumbnail">
-                                        <a href="car-details.html" className="car-img">
+                                        <Link href="/" className="car-img">
                                             <img src="/assets/img/car-list-1.jpg" alt="car-list" className="img-fluid"/>
-                                        </a>
+                                        </Link>
                                         <div className="car-overlay">
-                                            <a href="car-details.html" className="overlay-link">
+                                            <Link href="/" className="overlay-link">
                                                 <i className="fa fa-link"></i>
-                                            </a>
-                                            <a className="overlay-link car-video" title="Test Title">
+                                            </Link>
+                                            <button className="overlay-link car-video" title="Test Title">
                                                 <i className="fa fa-video-camera"></i>
-                                            </a>
+                                            </button>
                                             <div className="car-magnify-gallery">
-                                                <a href="/assets/img/car-1.jpg" className="overlay-link">
+                                                <Link href="/assets/img/car-1.jpg" className="overlay-link">
                                                     <i className="fa fa-expand"></i>
-                                                </a>
-                                                <a href="/assets/img/car-6.jpg" className="hidden"></a>
-                                                <a href="/assets/img/car-4.jpg" className="hidden"></a>
+                                                </Link>
+                                                <Link href="/assets/img/car-6.jpg" className="hidden"></Link>
+                                                <Link href="/assets/img/car-4.jpg" className="hidden"></Link>
                                             </div>
                                         </div>
                                         <div className="text">
-                                            <h3><a href="car-details.html">Audi A7 TDI</a></h3>
+                                            <h3><Link href="/">Audi A7 TDI</Link></h3>
                                             <ul className="facilities-list clearfix">
                                                 <li className="bordered-right">
                                                     <i className="flaticon-transport-4"></i> Sport
@@ -53,49 +54,26 @@ export default function HomeLatest() {
                             <div className="slick-slide-item">
                                 <div className="car-box-4">
                                     <div className="car-thumbnail">
-                                        <a href="car-details.html" className="car-img">
-                                            <img src="/assets/img/car-list-2.jpg" alt="car-list" className="img-fluid"/>
-                                        </a>
-                                        <div className="text">
-                                            <h3><a href="car-details.html">2016 Audi R8</a></h3>
-                                            <ul className="facilities-list clearfix">
-                                                <li className="bordered-right">
-                                                    <i className="flaticon-transport-4"></i> Sport
-                                                </li>
-                                                <li className="bordered-right">
-                                                    <i className="flaticon-road"></i> 17,000
-                                                </li>
-                                                <li>
-                                                    <i className="flaticon-petrol"></i> Diesel
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="slick-slide-item">
-                                <div className="car-box-4">
-                                    <div className="car-thumbnail">
-                                        <a href="car-details.html" className="car-img">
+                                        <Link href="/" className="car-img">
                                             <img src="/assets/img/car-list-1.jpg" alt="car-list" className="img-fluid"/>
-                                        </a>
+                                        </Link>
                                         <div className="car-overlay">
-                                            <a href="car-details.html" className="overlay-link">
+                                            <Link href="/" className="overlay-link">
                                                 <i className="fa fa-link"></i>
-                                            </a>
-                                            <a className="overlay-link car-video" title="Test Title">
+                                            </Link>
+                                            <button className="overlay-link car-video" title="Test Title">
                                                 <i className="fa fa-video-camera"></i>
-                                            </a>
+                                            </button>
                                             <div className="car-magnify-gallery">
-                                                <a href="/assets/img/car-1.jpg" className="overlay-link">
+                                                <Link href="/assets/img/car-1.jpg" className="overlay-link">
                                                     <i className="fa fa-expand"></i>
-                                                </a>
-                                                <a href="/assets/img/car-6.jpg" className="hidden"></a>
-                                                <a href="/assets/img/car-4.jpg" className="hidden"></a>
+                                                </Link>
+                                                <Link href="/assets/img/car-6.jpg" className="hidden"></Link>
+                                                <Link href="/assets/img/car-4.jpg" className="hidden"></Link>
                                             </div>
                                         </div>
                                         <div className="text">
-                                            <h3><a href="car-details.html">Audi A7 TDI</a></h3>
+                                            <h3><Link href="/">Audi A7 TDI</Link></h3>
                                             <ul className="facilities-list clearfix">
                                                 <li className="bordered-right">
                                                     <i className="flaticon-transport-4"></i> Sport
@@ -114,26 +92,26 @@ export default function HomeLatest() {
                             <div className="slick-slide-item">
                                 <div className="car-box-4">
                                     <div className="car-thumbnail">
-                                        <a href="car-details.html" className="car-img">
-                                            <img src="/assets/img/car-list-3.jpg" alt="car-list" className="img-fluid"/>
-                                        </a>
+                                        <Link href="/" className="car-img">
+                                            <img src="/assets/img/car-list-1.jpg" alt="car-list" className="img-fluid"/>
+                                        </Link>
                                         <div className="car-overlay">
-                                            <a href="car-details.html" className="overlay-link">
+                                            <Link href="/" className="overlay-link">
                                                 <i className="fa fa-link"></i>
-                                            </a>
-                                            <a className="overlay-link car-video" title="Test Title">
+                                            </Link>
+                                            <button className="overlay-link car-video" title="Test Title">
                                                 <i className="fa fa-video-camera"></i>
-                                            </a>
+                                            </button>
                                             <div className="car-magnify-gallery">
-                                                <a href="/assets/img/car-3.jpg" className="overlay-link">
+                                                <Link href="/assets/img/car-1.jpg" className="overlay-link">
                                                     <i className="fa fa-expand"></i>
-                                                </a>
-                                                <a href="/assets/img/car-6.jpg" className="hidden"></a>
-                                                <a href="/assets/img/car-4.jpg" className="hidden"></a>
+                                                </Link>
+                                                <Link href="/assets/img/car-6.jpg" className="hidden"></Link>
+                                                <Link href="/assets/img/car-4.jpg" className="hidden"></Link>
                                             </div>
                                         </div>
                                         <div className="text">
-                                            <h3><a href="car-details.html">Lexus Ct 2017</a></h3>
+                                            <h3><Link href="/">Audi A7 TDI</Link></h3>
                                             <ul className="facilities-list clearfix">
                                                 <li className="bordered-right">
                                                     <i className="flaticon-transport-4"></i> Sport
@@ -161,6 +139,7 @@ export default function HomeLatest() {
                 </div>
             </div>
 
+
             <div className="modal car-modal fade" id="carModal" role="dialog" aria-labelledby="carModal"
                  aria-hidden="true">
                 <div className="modal-dialog modal-lg" role="document">
@@ -182,20 +161,20 @@ export default function HomeLatest() {
                                                             allowFullScreen></iframe>
                                                 </div>
                                                 <div className="carousel-item">
-                                                    <img src="assets/img/car-1.jpg" alt="Test ALT"/>
+                                                    <img src="/assets/img/car-1.jpg" alt="Test ALT"/>
                                                 </div>
                                                 <div className="carousel-item">
-                                                    <img src="assets/img/car-1.jpg" alt="Test ALT"/>
+                                                    <img src="/assets/img/car-1.jpg" alt="Test ALT"/>
                                                 </div>
                                             </div>
-                                            <a className="control control-prev" href="#modalCarousel" role="button"
-                                               data-slide="prev">
+                                            <Link className="control control-prev" href="#modalCarousel" role="button"
+                                                  data-slide="prev">
                                                 <i className="fa fa-angle-left"></i>
-                                            </a>
-                                            <a className="control control-next" href="#modalCarousel" role="button"
+                                            </Link>
+                                            <Link className="control control-next" href="#modalCarousel" role="button"
                                                data-slide="next">
                                                 <i className="fa fa-angle-right"></i>
-                                            </a>
+                                            </Link>
                                         </div>
                                         <div className="description"><h3>Description</h3>
                                             <p>
@@ -244,7 +223,7 @@ export default function HomeLatest() {
                                                 <dd>$178,000</dd>
                                             </dl>
                                         </section>
-                                        <a href="car-details.html" className="btn btn-theme">Show Detail</a>
+                                        <Link href="/" className="btn btn-theme">Show Detail</Link>
                                     </div>
                                 </div>
                             </div>

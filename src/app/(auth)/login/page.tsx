@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function NotFound() {
+export default function Login() {
     function showPassword() {
         let passwordInput = document.getElementById("password");
         if(passwordInput == null)
