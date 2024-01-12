@@ -1,0 +1,7 @@
+{
+  "name": "nextjs-boot",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "custom"
+}
