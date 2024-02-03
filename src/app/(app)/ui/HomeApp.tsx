@@ -1,5 +1,6 @@
 import Link from "next/link";
-import {ANDROID_APP_LINK} from "@/app/info";
+import {ANDROID_APP_LINK} from "@/app/(app)/info";
+
 
 export default function HomeApp() {
     return (

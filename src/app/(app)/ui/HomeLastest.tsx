@@ -1,8 +1,11 @@
+"use client";
+
 import Link from "next/link";
+import ClientOnly from "@/app/(app)/ui/ClientOnly";
 
 export default function HomeLatest() {
     return (
-        <>
+        <ClientOnly>
             <div className="featured-car content-area-2 bg-grea">
                 <div className="container">
                     <div className="main-title">
@@ -231,6 +234,6 @@ export default function HomeLatest() {
                     </div>
                 </div>
             </div>
-        </>
+        </ClientOnly>
     )
 }

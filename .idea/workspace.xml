@@ -4,7 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="" />
+    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="fix: client rendering">
+      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/annonces/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/annonces/ui/Categorie.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/annonces/ui/Recherche.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/annonces/ui/SubBanner.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/annonces/ui/VoitureCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/utils/deconnexion.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/utils/hooks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/utils/storage.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/logos/logo-white.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/img/logos/logo-white.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/info.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/info.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/ui/ClientOnly.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/ui/ClientOnly.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/ui/HomeApp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/ui/HomeApp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/ui/HomeBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/ui/HomeBanner.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/ui/HomeDeveloper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/ui/HomeDeveloper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/ui/HomeLastest.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/ui/HomeLastest.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(auth)/login/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/connexion/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/info.tsx" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,33 +44,34 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2akmHg2hfxIJUTQL8U6qzdV40Ev" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/mendrika/IdeaProjects/nextjs-starter",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "settings.editor.selected.configurable": "AtomSettingsConfigurable",
-    "ts.external.directory.path": "/Users/mendrika/IdeaProjects/nextjs-starter/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mendrika/IdeaProjects/S5-frontoffice-automobile/src/app/utils&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;AtomSettingsConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/mendrika/IdeaProjects/S5-frontoffice-automobile/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactDesignerToolWindowState">
     <option name="myId2Visible">
       <map>
@@ -57,9 +82,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/app/(auth)/login" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/utils" />
       <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$/src/app/(app)" />
+      <recent name="$PROJECT_DIR$/public/assets/img/logos" />
+      <recent name="$PROJECT_DIR$/src/app/(app)/ui" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/assets/img/logos" />
+      <recent name="$PROJECT_DIR$/public/assets" />
+      <recent name="$PROJECT_DIR$/public/static" />
+      <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$/src/app/(app)" />
     </key>
   </component>
   <component name="RunManager">
@@ -90,7 +125,31 @@
       <workItem from="1704870865708" duration="14357000" />
       <workItem from="1704970981586" duration="14000" />
       <workItem from="1704995510737" duration="2919000" />
+      <workItem from="1705061735871" duration="24873000" />
+      <workItem from="1705170704438" duration="26000" />
+      <workItem from="1706725305861" duration="8056000" />
+      <workItem from="1706855927441" duration="296000" />
+      <workItem from="1706856462711" duration="4925000" />
+      <workItem from="1706872022005" duration="13000" />
+      <workItem from="1706957254218" duration="2001000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: template, home page">
+      <option name="closed" value="true" />
+      <created>1705074304269</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705074304269</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix: client rendering">
+      <option name="closed" value="true" />
+      <created>1705084114222</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705084114222</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,5 +165,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="feat: template, home page" />
+    <MESSAGE value="fix: client rendering" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: client rendering" />
   </component>
 </project>

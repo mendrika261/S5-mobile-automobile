@@ -31,12 +31,14 @@ import "./assets/fonts/font-awesome/css/font-awesome.min.css";
 import "./assets/fonts/flaticon/font/flaticon.css";
 import "./assets/css/style.css";
 import "./assets/css/skins/default.css";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 import { setupIonicReact } from '@ionic/react';
 import React from "react";
 import Script from "next/script";
 import {Viewport} from "next";
+import Toast from "@/app/(app)/ui/Toast";
 
 setupIonicReact();
 
@@ -63,6 +65,7 @@ export default function RootLayout({
       <html lang="fr">
       <body id="top">
       {children}
+      <Toast />
       
       <Script src="/assets/js/jquery-2.2.0.min.js"/>
       <Script src="/assets/js/popper.min.js"/>

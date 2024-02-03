@@ -1,5 +1,6 @@
 import Image from "next/image";
-import {DEVS} from "@/app/info";
+import {DEVS} from "@/app/(app)/info";
+
 
 export default function HomeDeveloper() {
     return (

@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 import Loading from "@/app/loading";
 
-function ClientOnly(props: { children: JSX.Element[] }) {
+function ClientOnly(props: { children: JSX.Element[]|JSX.Element }) {
     const { children } = props;
     return children;
 }

@@ -1,7 +1,8 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAndroid} from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
-import {ANDROID_APP_LINK} from "@/app/info";
+import {ANDROID_APP_LINK} from "@/app/(app)/info";
+
 
 export default function HomeBanner() {
     return (

@@ -24,6 +24,12 @@ export default function Header() {
                                             </Link>
                                         </li>
                                     ))}
+                                    <li className="nav-item dropdown">
+                                        <a className="btn btn-sm btn-white-sm-outline btn-round signup-link"
+                                           href="/connexion">Connexion</a>
+                                        <a className="btn btn-sm btn-theme btn-round signup-link"
+                                           href="/inscription">Inscription</a>
+                                    </li>
                                 </ul>
                             </div>
                         </nav>
