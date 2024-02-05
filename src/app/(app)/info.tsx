@@ -13,6 +13,10 @@ export const MENU = [
 
 export const MENU_CONNECTE = [
     {
+        label: 'Mes voitures',
+        url: '/voitures',
+    },
+    {
         label: 'Discussion',
         url: '/',
     },

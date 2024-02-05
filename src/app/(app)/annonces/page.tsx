@@ -1,10 +1,10 @@
 "use client";
 
-import SubBanner from "@/app/(app)/annonces/ui/SubBanner";
 import Recherche from "@/app/(app)/annonces/ui/Recherche";
 import Categorie from "@/app/(app)/annonces/ui/Categorie";
 import ClientOnly from "@/app/(app)/ui/ClientOnly";
 import VoitureCard from "@/app/(app)/annonces/ui/VoitureCard";
+import SubBanner from "@/app/(app)/ui/SubBanner";
 
 export default function ListAnnonce() {
     return (

@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="feat: inscription">
+    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="feat: connexion, deconnexion">
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/voitures/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/voitures/ui/VoitureBox.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/annonces/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/annonces/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/annonces/ui/SubBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/ui/SubBanner.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(app)/info.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/info.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/ui/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/ui/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/connexion/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/connexion/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/inscription/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/inscription/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/utils/deconnexion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/deconnexion.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/utils/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/hooks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/layout.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,11 +81,11 @@
       <recent name="$PROJECT_DIR$/public/assets/img/logos" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(app)/ui" />
       <recent name="$PROJECT_DIR$/public/assets/img/logos" />
       <recent name="$PROJECT_DIR$/public/assets" />
       <recent name="$PROJECT_DIR$/public/static" />
       <recent name="$PROJECT_DIR$/src/app" />
-      <recent name="$PROJECT_DIR$/src/app/(app)" />
     </key>
   </component>
   <component name="RunManager">
@@ -124,7 +124,7 @@
       <workItem from="1706872022005" duration="13000" />
       <workItem from="1706957254218" duration="6051000" />
       <workItem from="1706977486613" duration="597000" />
-      <workItem from="1707123348250" duration="1929000" />
+      <workItem from="1707123348250" duration="6414000" />
     </task>
     <task id="LOCAL-00001" summary="feat: template, home page">
       <option name="closed" value="true" />
@@ -150,7 +150,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706962548166</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: connexion, deconnexion">
+      <option name="closed" value="true" />
+      <created>1707125294283</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707125294283</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +181,7 @@
     <MESSAGE value="feat: template, home page" />
     <MESSAGE value="fix: client rendering" />
     <MESSAGE value="feat: inscription" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: inscription" />
+    <MESSAGE value="feat: connexion, deconnexion" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: connexion, deconnexion" />
   </component>
 </project>

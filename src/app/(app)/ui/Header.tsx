@@ -5,6 +5,7 @@ import Link from "next/link";
 import {useEffect, useState} from "react";
 import {API_BASE_URL} from "@/app/config";
 import {deconnexion} from "@/app/utils/deconnexion";
+import Image from "next/image";
 
 export default function Header() {
     const [connecte, setConnecte] = useState(false);
@@ -16,9 +17,9 @@ export default function Header() {
         }
     }, []);
 
-    function deconnexionAction(form: any) {
+    function deconnexionAction() {
         deconnexion(API_BASE_URL+"tokens/utilisateur");
-        window?.location?.reload();
+        window?.location?.replace("/");
     }
 
     return (
@@ -28,7 +29,7 @@ export default function Header() {
                     <div className="col-12">
                         <nav className="navbar navbar-expand-lg navbar-light rounded">
                             <Link className="navbar-brand logo navbar-brand d-flex mr-auto" href="/">
-                                <img src="/assets/img/logos/black-logo.png" alt="logo" />
+                                <Image src="/assets/img/logos/black-logo.png" alt="logo" width={100} height={30}/>
                             </Link>
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="fa fa-bars"></span>

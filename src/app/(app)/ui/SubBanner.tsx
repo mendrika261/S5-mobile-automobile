@@ -1,8 +1,14 @@
+"use client";
+
+import Link from "next/link";
+import ClientOnly from "@/app/(app)/ui/ClientOnly";
+
 export default function SubBanner(
-    {titre}:
-    {titre: string}
+    {titre, buttons}:
+    {titre: string, buttons?: any[]}
 ) {
     return (
+        <ClientOnly>
         <div className="sub-banner overview-bgi">
             <div className="container">
                 <div className="page-name">
@@ -23,7 +29,14 @@ export default function SubBanner(
                         <div className="col-md-7">
                             <div className="contact-info">
                                 <ul>
-                                    <li><a href="/connexion" className="btn btn-md btn-theme">Se connecter</a></li>
+                                    {/*<li><a href="/connexion" className="btn btn-md btn-theme">Se connecter</a></li>*/}
+                                    {buttons && buttons.map((button, index) => (
+                                        <li key={index}>
+                                            <li>
+                                                <Link href={button.url} className="btn btn-md btn-theme">{button.nom}</Link>
+                                            </li>
+                                        </li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -31,5 +44,6 @@ export default function SubBanner(
                 </div>
             </div>
         </div>
+        </ClientOnly>
     )
 }
