@@ -6,14 +6,18 @@ export const MENU = [
         url: '/',
     },
     {
-        label: 'À propos',
-        url: '/about',
-    },
-    {
-        label: 'Contact',
-        url: '/contact',
+        label: 'Annonce',
+        url: '/annonces',
     },
 ];
+
+export const MENU_CONNECTE = [
+    {
+        label: 'Discussion',
+        url: '/',
+    },
+];
+
 
 export const DEVS= [
     {

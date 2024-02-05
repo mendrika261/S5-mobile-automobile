@@ -1,8 +1,26 @@
-import Image from "next/image";
-import {MENU} from "@/app/(app)/info";
+"use client";
+
+import {MENU, MENU_CONNECTE} from "@/app/(app)/info";
 import Link from "next/link";
+import {useEffect, useState} from "react";
+import {API_BASE_URL} from "@/app/config";
+import {deconnexion} from "@/app/utils/deconnexion";
 
 export default function Header() {
+    const [connecte, setConnecte] = useState(false);
+
+    useEffect(() => {
+        const token = localStorage?.getItem("token");
+        if (token) {
+            setConnecte(true);
+        }
+    }, []);
+
+    function deconnexionAction(form: any) {
+        deconnexion(API_BASE_URL+"tokens/utilisateur");
+        window?.location?.reload();
+    }
+
     return (
         <header className="main-header sticky-header" id="main-header-2" style={{zIndex: 10000}}>
             <div className="container">
@@ -24,12 +42,31 @@ export default function Header() {
                                             </Link>
                                         </li>
                                     ))}
-                                    <li className="nav-item dropdown">
-                                        <a className="btn btn-sm btn-white-sm-outline btn-round signup-link"
-                                           href="/connexion">Connexion</a>
-                                        <a className="btn btn-sm btn-theme btn-round signup-link"
-                                           href="/inscription">Inscription</a>
-                                    </li>
+                                    {connecte ? (
+                                        <>
+                                            {MENU_CONNECTE.map((item, index) => (
+                                                <li key={index} className="nav-item">
+                                                    <Link className="nav-link" href={item.url}>
+                                                        {item.label}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                            <li className="nav-item dropdown">
+                                                <button className="btn btn-sm btn-white-sm-outline
+                                                    btn-round signup-link"
+                                                onClick={deconnexionAction}>
+                                                    Déconnexion</button>
+                                            </li>
+                                        </>
+                                    ) : (
+                                        <li className="nav-item dropdown">
+                                            <a className="btn btn-sm btn-white-sm-outline btn-round signup-link"
+                                               href="/connexion">Connexion</a>
+                                            <a className="btn btn-sm btn-theme btn-round signup-link"
+                                               href="/inscription">Inscription</a>
+                                        </li>
+                                    )}
+
                                 </ul>
                             </div>
                         </nav>

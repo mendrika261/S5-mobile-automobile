@@ -3,6 +3,7 @@
 import {useState} from "react";
 import {sendPost} from "@/app/utils/hooks";
 import {API_BASE_URL} from "@/app/config";
+import Link from "next/link";
 
 export default function Inscription() {
     const [data, setData] = useState({
@@ -29,7 +30,7 @@ export default function Inscription() {
                                 <img src="/assets/img/logos/logo.png" className="cm-logo" alt="logo"/>
                             </a>
                             <div className="details">
-                                <h3>Create an account</h3>
+                                <h3>Création de compte</h3>
                                 <form id={"form"}>
                                     <div className="form-group">
                                         <input type="text" className="input-text" placeholder="Prénom"
@@ -66,7 +67,7 @@ export default function Inscription() {
                             </div>
                             <div className="footer">
                             <span>
-                                Déjà membre? <a href="/connexion">Se connecter ici</a>
+                                Déjà membre? <Link href="/connexion">Se connecter ici</Link>
                             </span>
                             </div>
                         </div>

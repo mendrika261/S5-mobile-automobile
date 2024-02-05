@@ -14,12 +14,12 @@ const FIREBASE_PREFIX = "fichiers";
 
 async function handleErrors(error: any) {
     if(error.response.status === 401) {
-        deconnexion();
+        deconnexion(API_BASE_URL+"tokens/utilisateur");
         window?.location?.replace('/connexion');
         return;
     }
     if(error.response.status === 403) {
-        window?.location?.replace('/403');
+        window?.location?.replace('/404');
         return;
     }
     if (error?.response?.data?.message !== undefined && error?.response?.data?.message !== null)
@@ -78,8 +78,8 @@ export async function sendPost(url: string, form: any, noToast?: boolean) {
     return responseData;
 }
 
-export async function sendPostConnexion(form: any) : Promise<any> {
-    await AXIOS.post(API_BASE_URL+'connexion', form,{
+export async function sendPostConnexion(url: string, form: any) : Promise<any> {
+    await AXIOS.post(url, form,{
         headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
         }
