@@ -10,7 +10,6 @@ export default function PortalLayout({
       <>
           <Header/>
           {children}
-          <Footer />
       </>
   )
 }

@@ -1,5 +1,4 @@
 import Header from "@/app/(app)/ui/Header";
-import Navbar from "@/app/(app)/ui/Navbar";
 import Footer from "@/app/(app)/ui/Footer";
 import { Viewport } from 'next'
 
@@ -20,7 +19,6 @@ export default function PortalLayout({
   return (
       <div className="page">
           <Header/>
-          <Navbar/>
           <div className="page-wrapper">
               {children}
               <Footer/>

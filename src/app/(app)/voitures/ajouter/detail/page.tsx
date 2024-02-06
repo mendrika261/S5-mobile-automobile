@@ -1,11 +1,11 @@
 "use client";
 
 import SubBanner from "@/app/(app)/ui/SubBanner";
-import Link from "next/link";
 import ClientOnly from "@/app/(app)/ui/ClientOnly";
 import {useEffect, useState} from "react";
 import {sendPost, useGet} from "@/app/utils/hooks";
-import {API_URL} from "@/app/config";
+import {API_URL, URL_EXTENSION} from "@/app/config";
+import Loading from "@/app/loading";
 
 export default function AjouterVoiture() {
     const [data, setData] = useState({
@@ -49,14 +49,20 @@ export default function AjouterVoiture() {
         // @ts-ignore
         data.sortieVoiture = JSON.parse(voiture).id;
 
-        await sendPost(API_URL+"voitures", data);
+        const response = await sendPost(API_URL+"voitures", data);
         btn.target.classList.remove("btn-loading");
+
+        if (response != null) {
+            localStorage?.setItem("voiture", JSON.stringify(response));
+            location?.replace("/voitures/ajouter/detail/photo" + URL_EXTENSION + "?id=" + response.id);
+        }
     }
 
     return (
         <ClientOnly>
-            <SubBanner titre="Ajouter une voiture - détails" />
+            <SubBanner titre="Ajouter une voiture" />
 
+            {(etatVoitures && couleurs) ?
             <div className="car-list-fullwidth content-area-2">
                 <div className="container">
                     <div className="row">
@@ -64,12 +70,12 @@ export default function AjouterVoiture() {
 
                             <div className="card">
                                 <div className="card-header">
-                                    <Link href={"/voitures/ajouter"} className="btn btn-sm btn-secondary mx-2">
+                                    <a href={`/voitures/ajouter${URL_EXTENSION}`} className="btn btn-sm btn-secondary mx-2">
                                         Retour
-                                    </Link>
-                                    <Link href={"/voitures"} className="btn btn-sm btn-primary mx-2">
+                                    </a>
+                                    <a href={`/voitures${URL_EXTENSION}`} className="btn btn-sm btn-primary mx-2">
                                         Mes voitures
-                                    </Link>
+                                    </a>
                                 </div>
                                 <div className="card-body">
 
@@ -97,7 +103,7 @@ export default function AjouterVoiture() {
                                             <select className="form-control form-select"
                                                     onChange={e =>
                                                         setData({...data, etatVoiture: e.target.value})}>
-                                                {etatVoitures && etatVoitures.map((etat: any, index: string) => (
+                                                {etatVoitures.map((etat: any, index: string) => (
                                                     <option key={index} value={etat.id}>{etat.designation}</option>
                                                 ))}
                                             </select>
@@ -132,7 +138,7 @@ export default function AjouterVoiture() {
                                                         setData({...data, couleur: couleur[0]});
                                                         setCouleur("#" + couleur[1]);
                                                     }}>
-                                                {couleurs && couleurs.map((couleur: any, index: string) => (
+                                                {couleurs.map((couleur: any, index: string) => (
                                                     <option key={index}
                                                             value={`${couleur.id}${couleur.codeCouleur}`}>{couleur.nom}</option>
                                                 ))}
@@ -199,6 +205,7 @@ export default function AjouterVoiture() {
                     </div>
                 </div>
             </div>
+            : <Loading/>}
         </ClientOnly>
     )
 }

@@ -7,6 +7,13 @@ const config: CapacitorConfig = {
   server: {
     androidScheme: 'https'
   }
-};
+,
+    android: {
+       buildOptions: {
+          keystorePath: '/Users/mendrika/android/android',
+          keystoreAlias: 'key0',
+       }
+    }
+  };
 
 export default config;

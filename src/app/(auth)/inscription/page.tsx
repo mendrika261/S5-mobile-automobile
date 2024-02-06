@@ -2,8 +2,7 @@
 
 import {useState} from "react";
 import {sendPost} from "@/app/utils/hooks";
-import {API_BASE_URL} from "@/app/config";
-import Link from "next/link";
+import {API_BASE_URL, URL_EXTENSION} from "@/app/config";
 
 export default function Inscription() {
     const [data, setData] = useState({
@@ -67,7 +66,7 @@ export default function Inscription() {
                             </div>
                             <div className="footer">
                             <span>
-                                Déjà membre? <Link href="/connexion">Se connecter ici</Link>
+                                Déjà membre? <a href={`/connexion${URL_EXTENSION}`}>Se connecter ici</a>
                             </span>
                             </div>
                         </div>

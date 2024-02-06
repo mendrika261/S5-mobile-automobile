@@ -1,12 +1,11 @@
 "use client";
 
 import SubBanner from "@/app/(app)/ui/SubBanner";
-import Link from "next/link";
 import {useGet} from "@/app/utils/hooks";
-import {API_URL} from "@/app/config";
-import ClientOnly from "@/app/(app)/ui/ClientOnly";
+import {API_URL, URL_EXTENSION} from "@/app/config";
 import {useEffect, useState} from "react";
 import {toast} from "react-toastify";
+import Loading from "@/app/loading";
 
 function getSortiesVoitureFiltre(sortieVoiture: any, filtres: any): any[] {
     return sortieVoiture.filter((v: any) => {
@@ -30,22 +29,25 @@ export default function AjouterVoiture() {
     useEffect(() => {
         if(sortieVoitures === null) return;
         setSortieVoituresFiltre(getSortiesVoitureFiltre(sortieVoitures, filtres));
-        console.log(filtres, getSortiesVoitureFiltre(sortieVoitures, filtres));
     }, [filtres]);
 
     function suivant() {
-        if(sortieVoituresFiltre === null)
+        if(sortieVoituresFiltre === null) {
             toast.error("Vous devez sélectionner le modèle de la voiture");
-        else if(sortieVoituresFiltre.length === 0)
+            return;
+        } else if(sortieVoituresFiltre.length === 0) {
             toast.error("Aucune voiture ne correspond");
+            return;
+        }
         localStorage?.setItem("voiture", JSON.stringify(sortieVoituresFiltre[0]));
-        location.replace("/voitures/ajouter/detail");
+        location.replace("/voitures/ajouter/detail" + URL_EXTENSION);
     }
 
     return (
-        <ClientOnly>
+        <>
             <SubBanner titre="Ajouter une voiture" />
 
+            {sortieVoitures ?
             <div className="car-list-fullwidth content-area-2">
                 <div className="container">
                     <div className="row">
@@ -53,9 +55,9 @@ export default function AjouterVoiture() {
 
                             <div className="card">
                                 <div className="card-header">
-                                    <Link href={"/voitures"} className="btn btn-sm btn-secondary mx-2">
+                                    <a href={`/voitures${URL_EXTENSION}`} className="btn btn-sm btn-secondary mx-2">
                                         Retour
-                                    </Link>
+                                    </a>
                                     <button className="btn btn-sm btn-warning mx-2" onClick={() => {location?.reload()}}>
                                         Reset
                                     </button>
@@ -68,7 +70,7 @@ export default function AjouterVoiture() {
                                             <select className="form-control form-select"
                                                     onChange={(e) => setFiltres({modele: e.target.value})}>
                                                 <option>Sélectionner un modèle</option>
-                                                {sortieVoitures && sortieVoitures.map((m: any, i: string) => (
+                                                {sortieVoitures.map((m: any, i: string) => (
                                                     <option key={i} value={m.modele.id}>
                                                         {m.modele.marque.nom} - {m.modele.nom}
                                                     </option>
@@ -219,6 +221,7 @@ export default function AjouterVoiture() {
                     </div>
                 </div>
             </div>
-        </ClientOnly>
+            : <Loading/>}
+        </>
     )
 }

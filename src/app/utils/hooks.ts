@@ -4,7 +4,7 @@ import {Dispatch, useEffect, useState} from "react";
 import {toast} from "react-toastify";
 import {deleteObject, getDownloadURL, ref, uploadBytesResumable} from "firebase/storage";
 import {storage} from "@/app/utils/storage";
-import {API_BASE_URL, API_URL} from "@/app/config";
+import {API_BASE_URL, API_URL, URL_EXTENSION} from "@/app/config";
 import {uuidv4} from "@firebase/util";
 import {deconnexion} from "@/app/utils/deconnexion";
 
@@ -15,11 +15,11 @@ const FIREBASE_PREFIX = "fichiers";
 async function handleErrors(error: any) {
     if(error.response.status === 401) {
         deconnexion(API_BASE_URL+"tokens/utilisateur");
-        window?.location?.replace('/connexion');
+        window?.location?.replace('/connexion'+URL_EXTENSION);
         return;
     }
     if(error.response.status === 403) {
-        window?.location?.replace('/404');
+        window?.location?.replace('/404'+URL_EXTENSION);
         return;
     }
     if (error?.response?.data?.message !== undefined && error?.response?.data?.message !== null)
@@ -34,7 +34,8 @@ export function useGet(url: string, childrenObjectOnlyId?: boolean): [any, Dispa
     useEffect(() => {
         AXIOS.get(url, {
             headers: {
-                'Authorization': 'Bearer ' + window?.localStorage?.getItem('token')
+                'Authorization': 'Bearer ' + window?.localStorage?.getItem('token'),
+                "ngrok-skip-browser-warning": "69420"
             }
         })
             .then(function (response: any) {
@@ -61,11 +62,12 @@ export function useGet(url: string, childrenObjectOnlyId?: boolean): [any, Dispa
 
 
 export async function sendPost(url: string, form: any, noToast?: boolean) {
-    let responseData = null;
+    let responseData: any = null;
     await AXIOS.post(url, form, {
         headers: {
             'Authorization': 'Bearer ' + window?.localStorage?.getItem('token'),
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/x-www-form-urlencoded',
+            "ngrok-skip-browser-warning": "69420"
         }
     })
         .then(function (response: any) {
@@ -81,7 +83,8 @@ export async function sendPost(url: string, form: any, noToast?: boolean) {
 export async function sendPostConnexion(url: string, form: any) : Promise<any> {
     await AXIOS.post(url, form,{
         headers: {
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/x-www-form-urlencoded',
+            "ngrok-skip-browser-warning": "69420"
         }
     })
         .then(function (response:any):void {
@@ -111,7 +114,8 @@ export async function sendPut(url: string, form: any): Promise<any> {
     await AXIOS.put(url, form, {
         headers: {
             'Authorization': 'Bearer ' + window?.localStorage?.getItem('token'),
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/x-www-form-urlencoded',
+            "ngrok-skip-browser-warning": "69420"
         }
     })
         .then(function (response: any) {
@@ -132,7 +136,8 @@ export async function sendDelete(url: string): Promise<any> {
     await AXIOS.delete(url, {
         headers: {
             'Authorization': 'Bearer ' + window?.localStorage?.getItem('token'),
-            'Content-Type': 'application/x-www-form-urlencoded'
+            'Content-Type': 'application/x-www-form-urlencoded',
+            "ngrok-skip-browser-warning": "69420"
         }
     })
         .then(function (response: any) {
@@ -167,7 +172,8 @@ export async function upload_file(file: File, setLoading: any): Promise<any> {
 
     const path = `${FIREBASE_PREFIX}/${uuidv4()}`;
     const imageRef= ref(storage, path);
-    const uploadTask = uploadBytesResumable(imageRef, file);
+    const uploadTask = uploadBytesResumable(
+        imageRef, file);
     let fileObject = null;
     await new Promise<void>((resolve, reject) => {
         uploadTask.on('state_changed',

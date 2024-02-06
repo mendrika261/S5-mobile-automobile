@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import ClientOnly from "@/app/(app)/ui/ClientOnly";
 
 export default function SubBanner(
@@ -21,7 +20,7 @@ export default function SubBanner(
                         <div className="col-md-5">
                             <div className="breadcrumb-area">
                                 <ul>
-                                    <li><a href="/">Accueil</a></li>
+                                    <li><a href="/">Annonces</a></li>
                                     <li><span>/</span>{titre}</li>
                                 </ul>
                             </div>
@@ -33,7 +32,7 @@ export default function SubBanner(
                                     {buttons && buttons.map((button, index) => (
                                         <li key={index}>
                                             <li>
-                                                <Link href={button.url} className="btn btn-md btn-theme">{button.nom}</Link>
+                                                <a href={button.url} className="btn btn-md btn-theme">{button.nom}</a>
                                             </li>
                                         </li>
                                     ))}

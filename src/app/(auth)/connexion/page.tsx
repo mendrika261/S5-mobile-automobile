@@ -2,8 +2,7 @@
 
 import {useState} from "react";
 import {sendPostConnexion} from "@/app/utils/hooks";
-import {API_BASE_URL} from "@/app/config";
-import Link from "next/link";
+import {API_BASE_URL, URL_EXTENSION} from "@/app/config";
 
 export default function Connexion() {
     const [data, setData] = useState({
@@ -51,7 +50,7 @@ export default function Connexion() {
                             </div>
                             <div className="footer">
                             <span>
-                                Pas encore de compte? <Link href="/inscription">S&apos;inscrire ici</Link>
+                                Pas encore de compte? <a href={`/inscription${URL_EXTENSION}`}>S&apos;inscrire ici</a>
                             </span>
                             </div>
                         </div>
