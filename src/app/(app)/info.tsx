@@ -17,6 +17,10 @@ export const MENU_CONNECTE = [
         url: '/voitures',
     },
     {
+        label: 'Mes annonces',
+        url: '/mes-annonces',
+    },
+    {
         label: 'Discussion',
         url: '/',
     },

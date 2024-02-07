@@ -4,32 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="feat: ajouter voiture">
-      <change afterPath="$PROJECT_DIR$/public/assets/img/noimage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(app)/voitures/ajouter/detail/photo/page.tsx" afterDir="false" />
+    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="feat: liste, ajouter voiture">
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/annonces/ajouter/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/mes-annonces/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(app)/mes-annonces/ui/VoitureBox.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/capacitor.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/capacitor.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project-summary.md" beforeDir="false" afterPath="$PROJECT_DIR$/project-summary.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/ui/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/ui/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/ui/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/ui/Navbar.tsx.bk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/ui/SubBanner.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/ui/SubBanner.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/voitures/ajouter/detail/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/voitures/ajouter/detail/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/voitures/ajouter/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/voitures/ajouter/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/voitures/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/voitures/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/voitures/ui/VoitureBox.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/voitures/ui/VoitureBox.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/connexion/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/connexion/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(auth)/inscription/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(auth)/inscription/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/loading.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/loading.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/portal/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/portal/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/utils/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/hooks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/info.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/info.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/mendrika/IdeaProjects/S5-frontoffice-automobile/public/assets/img",
+    "last_opened_file_path": "/Users/mendrika/IdeaProjects/S5-frontoffice-automobile/src/app/(app)/annonces/ajouter",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,11 +73,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(app)/annonces/ajouter" />
+      <recent name="$PROJECT_DIR$/src/app/(app)/mes-annonces" />
       <recent name="$PROJECT_DIR$/public/assets/img" />
       <recent name="$PROJECT_DIR$/src/app/(app)/voitures/ajouter/detail" />
       <recent name="$PROJECT_DIR$/src/app/(app)/voitures/ajouter/detail/photo" />
-      <recent name="$PROJECT_DIR$/src/app/(app)/voitures/ajouter" />
-      <recent name="$PROJECT_DIR$/src/app/(app)/ui" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/(app)/ui" />
@@ -144,7 +125,7 @@
       <workItem from="1706977486613" duration="597000" />
       <workItem from="1707123348250" duration="28087000" />
       <workItem from="1707159803544" duration="8405000" />
-      <workItem from="1707200737346" duration="31078000" />
+      <workItem from="1707200737346" duration="39604000" />
     </task>
     <task id="LOCAL-00001" summary="feat: template, home page">
       <option name="closed" value="true" />
@@ -186,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707152438052</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="feat: liste, ajouter voiture">
+      <option name="closed" value="true" />
+      <created>1707248051735</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707248051735</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +200,7 @@
     <MESSAGE value="feat: inscription" />
     <MESSAGE value="feat: connexion, deconnexion" />
     <MESSAGE value="feat: ajouter voiture" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: ajouter voiture" />
+    <MESSAGE value="feat: liste, ajouter voiture" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: liste, ajouter voiture" />
   </component>
 </project>
