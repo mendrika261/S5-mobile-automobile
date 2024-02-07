@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="feat: liste, ajouter voiture">
-      <change afterPath="$PROJECT_DIR$/src/app/(app)/annonces/ajouter/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(app)/mes-annonces/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(app)/mes-annonces/ui/VoitureBox.tsx" afterDir="false" />
+    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="feat: liste, ajouter annonce, modifier etat">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/info.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/info.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capacitor.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/capacitor.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(app)/ui/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/ui/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/utils/deconnexion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/deconnexion.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/utils/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/hooks.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +49,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/mendrika/IdeaProjects/S5-frontoffice-automobile/src/app/(app)/annonces/ajouter",
+    "last_opened_file_path": "/Users/mendrika/IdeaProjects/S5-frontoffice-automobile/android/app/src/main/res/mipmap",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,11 +77,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/android/app/src/main/res/mipmap" />
+      <recent name="$PROJECT_DIR$/android/app" />
       <recent name="$PROJECT_DIR$/src/app/(app)/annonces/ajouter" />
       <recent name="$PROJECT_DIR$/src/app/(app)/mes-annonces" />
       <recent name="$PROJECT_DIR$/public/assets/img" />
-      <recent name="$PROJECT_DIR$/src/app/(app)/voitures/ajouter/detail" />
-      <recent name="$PROJECT_DIR$/src/app/(app)/voitures/ajouter/detail/photo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/app/(app)/ui" />
@@ -125,7 +129,7 @@
       <workItem from="1706977486613" duration="597000" />
       <workItem from="1707123348250" duration="28087000" />
       <workItem from="1707159803544" duration="8405000" />
-      <workItem from="1707200737346" duration="39604000" />
+      <workItem from="1707200737346" duration="52462000" />
     </task>
     <task id="LOCAL-00001" summary="feat: template, home page">
       <option name="closed" value="true" />
@@ -175,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707248051735</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="feat: liste, ajouter annonce, modifier etat">
+      <option name="closed" value="true" />
+      <created>1707288935237</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1707288935237</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +213,7 @@
     <MESSAGE value="feat: connexion, deconnexion" />
     <MESSAGE value="feat: ajouter voiture" />
     <MESSAGE value="feat: liste, ajouter voiture" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: liste, ajouter voiture" />
+    <MESSAGE value="feat: liste, ajouter annonce, modifier etat" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: liste, ajouter annonce, modifier etat" />
   </component>
 </project>

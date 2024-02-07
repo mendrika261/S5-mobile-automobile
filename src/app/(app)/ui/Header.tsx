@@ -15,8 +15,8 @@ export default function Header() {
         }
     }, []);
 
-    function deconnexionAction() {
-        deconnexion(API_BASE_URL+"tokens/utilisateur");
+    async function deconnexionAction() {
+        await deconnexion(API_BASE_URL+"tokens/utilisateur");
         window?.location?.replace("/");
     }
 

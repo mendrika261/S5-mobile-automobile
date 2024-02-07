@@ -17,6 +17,7 @@
     "@capacitor/haptics": "next",
     "@capacitor/ios": "next",
     "@capacitor/keyboard": "next",
+    "@capacitor/push-notifications": "^5.1.1",
     "@capacitor/status-bar": "next",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",

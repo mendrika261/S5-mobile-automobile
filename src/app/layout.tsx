@@ -39,6 +39,8 @@ import {Viewport} from "next";
 import Toast from "@/app/(app)/ui/Toast";
 import ClientOnly from "@/app/(app)/ui/ClientOnly";
 import Loading from "@/app/loading";
+import {PushNotifications} from "@capacitor/push-notifications";
+import {toast} from "react-toastify";
 
 setupIonicReact(
     {
@@ -60,6 +62,26 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+    const registerNotifications = async () => {
+        let permStatus = await PushNotifications.checkPermissions();
+
+        if (permStatus.receive === 'prompt') {
+            permStatus = await PushNotifications.requestPermissions();
+        }
+
+        if (permStatus.receive !== 'granted') {
+            toast.error("Vous devez autoriser les notifications pour utiliser l'application");
+        }
+
+        await PushNotifications.register();
+    }
+
+    useEffect(() => {
+        registerNotifications();
+    }, []);
+
+
   return (
       <html lang="fr">
       <body id="top">
