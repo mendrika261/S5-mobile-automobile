@@ -117,7 +117,7 @@ export async function sendPostConnexion(url: string, form: any) : Promise<any> {
                 localStorage?.setItem('utilisateur', JSON.stringify(response.data.data.utilisateur));
             }
             if(localStorage?.getItem('token')!==null)
-                location?.replace('/');
+                location?.replace("/mes-annonces"+URL_EXTENSION);
             if (response.data.message !== undefined && response.data.message !== null)
                 toast(response.data.message, {type: response.data.status});
         })

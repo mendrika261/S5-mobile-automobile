@@ -46,8 +46,9 @@ export default async function VoitureBox(
                 <div className="col-lg-8 col-md-12">
                     <div className="detail ">
                         <h3 className="title">
-                            <a href={`/voitures/ajouter/detail/photo${URL_EXTENSION}?id=${data.voiture.id}`}>
+                            <a href={`/voitures/modifier${URL_EXTENSION}?id=${data.voiture.id}`}>
                                 {data.voiture.sortieVoiture.modele.marque.nom} - {data.voiture.sortieVoiture.modele.nom}
+                                <span className="fa fa-edit mx-2"></span>
                             </a>
                         </h3>
 
@@ -95,9 +96,11 @@ export default async function VoitureBox(
                     {data.etat == 10 ?
                         <button className="btn btn-primary" onClick={() => terminer(data.id, 20)}>
                             Terminer
+                            <span className="fa fa-check ml-2"></span>
                         </button> :
                         <button className="btn btn-warning" onClick={() => supprimer(data.id)}>
                             Supprimer
+                            <span className="fa fa-trash ml-2"></span>
                         </button>
                     }
                 </div>

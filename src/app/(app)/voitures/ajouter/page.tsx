@@ -57,9 +57,11 @@ export default function AjouterVoiture() {
                                 <div className="card-header">
                                     <a href={`/voitures${URL_EXTENSION}`} className="btn btn-sm btn-secondary mx-2">
                                         Retour
+                                        <span className="fa fa-arrow-left mx-2"></span>
                                     </a>
                                     <button className="btn btn-sm btn-warning mx-2" onClick={() => {location?.reload()}}>
                                         Reset
+                                        <span className="fa fa-refresh mx-2"></span>
                                     </button>
                                 </div>
                                 <div className="card-body">
@@ -213,7 +215,10 @@ export default function AjouterVoiture() {
                                     </div>
                                 </div>
                                 <div className="card-footer d-flex justify-content-end">
-                                    <button className="btn btn-sm btn-success" onClick={suivant}>Suivant</button>
+                                    <button className="btn btn-sm btn-success" onClick={suivant}>
+                                        Suivant
+                                        <span className="fa fa-arrow-right mx-2"></span>
+                                    </button>
                                 </div>
                             </div>
 

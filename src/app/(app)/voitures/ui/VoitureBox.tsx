@@ -34,8 +34,9 @@ export default async function VoitureBox(
                 <div className="col-lg-8 col-md-12">
                     <div className="detail ">
                         <h3 className="title">
-                            <a href={`/voitures/ajouter/detail/photo${URL_EXTENSION}?id=${data.id}`}>
+                            <a href={`/voitures/modifier${URL_EXTENSION}?id=${data.id}`}>
                                 {data.sortieVoiture.modele.marque.nom} - {data.sortieVoiture.modele.nom}
+                                <span className="fa fa-edit mx-2"></span>
                             </a>
                         </h3>
 
@@ -81,6 +82,7 @@ export default async function VoitureBox(
                     </div>
                     <button className="btn btn-warning" onClick={() => supprimer(data.id)}>
                         Supprimer
+                        <span className="fa fa-trash ml-2"></span>
                     </button>
                 </div>
             </div>

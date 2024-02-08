@@ -1,14 +1,7 @@
 export const ANDROID_APP_LINK = '';
+export const LINK_APP_LINK = 'https://fiara.netlify.app';
 
 export const MENU = [
-    {
-        label: 'Accueil',
-        url: '/',
-    },
-    {
-        label: 'Annonce',
-        url: '/annonces',
-    },
 ];
 
 export const MENU_CONNECTE = [

@@ -2,7 +2,7 @@
 
 import {MENU, MENU_CONNECTE} from "@/app/(app)/info";
 import {useEffect, useState} from "react";
-import {API_BASE_URL, API_URL, URL_EXTENSION} from "@/app/config";
+import {API_BASE_URL, URL_EXTENSION} from "@/app/config";
 import {deconnexion} from "@/app/utils/deconnexion";
 
 export default function Header() {
@@ -26,7 +26,7 @@ export default function Header() {
                 <div className="row">
                     <div className="col-12">
                         <nav className="navbar navbar-expand-lg navbar-light rounded">
-                            <a className="navbar-brand logo navbar-brand d-flex mr-auto" href="/">
+                            <a className="navbar-brand logo navbar-brand d-flex mr-auto" href={`/mes-annonces${URL_EXTENSION}`}>
                                 <img src="/assets/img/logos/black-logo.png" alt="logo"/>
                             </a>
                             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +34,7 @@ export default function Header() {
                             </button>
                             <div className="navbar-collapse collapse w-100" id="navbar">
                                 <ul className="navbar-nav ml-auto">
-                                    {MENU.map((item, index) => (
+                                    {MENU.map((item: any, index) => (
                                         <li key={index} className="nav-item">
                                             <a className="nav-link" href={`${item.url}${URL_EXTENSION}`}>
                                                 {item.label}

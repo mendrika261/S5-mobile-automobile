@@ -3,53 +3,31 @@
 import SubBanner from "@/app/(app)/ui/SubBanner";
 import ClientOnly from "@/app/(app)/ui/ClientOnly";
 import {useEffect, useState} from "react";
-import {sendPost, useGet} from "@/app/utils/hooks";
+import {sendPut, useGet} from "@/app/utils/hooks";
 import {API_URL, URL_EXTENSION} from "@/app/config";
 import Loading from "@/app/loading";
+import {useSearchParams} from "next/navigation";
 
-export default function AjouterVoiture() {
-    const [data, setData] = useState({
-        sortieVoiture: "",
-        utilisateur: "",
-        kilometrageVidange: "",
-        kilometrage: "",
-        etatVoiture: "",
-        premiereMain: "false",
-        couleur: "",
-        miseEnCirculation: "",
-        immatriculation: "",
-        dateFinAssurance: "",
-        dateControleTech: "",
-        description: "",
-    });
+export default function ModifierVoiture() {
+    const params = useSearchParams();
+    const [data, setData] = useGet(API_URL+"voitures/"+params.get("id"), true);
     const [etatVoitures, setEtatVoitures] = useGet(API_URL+"etat-voitures");
     const [couleurs, setCouleurs] = useGet(API_URL+"couleurs");
     const [couleur, setCouleur] = useState("");
+    const [isFirst, setIsFirst] = useState(true);
 
     useEffect(() => {
-        if(etatVoitures === null) return;
-        setData({...data, etatVoiture: etatVoitures[0]?.id});
-
-        if(couleurs === null) return;
-        setData({...data, couleur: couleurs[0]?.id});
-        setCouleur(couleurs[0]?.codeCouleur);
-        console.log(data);
-    }, [etatVoitures, couleurs]);
+        if(data==null || couleurs == null || !isFirst) return;
+        const couleur = couleurs.filter((couleur: any) => couleur.id == data.couleur);
+        setCouleur(couleur[0].codeCouleur);
+        if(data.photos.length > 0)
+            data.photos = data.photos.map((photo: any) => photo.id);
+        setIsFirst(false);
+    }, [data, couleurs]);
 
     async function enregistrer(btn: any) {
         btn.target.classList.add("btn-loading");
-
-        const utilisateur = localStorage?.getItem("utilisateur");
-        if(utilisateur === null) location?.replace("/connexion");
-        // @ts-ignore
-        data.utilisateur = JSON.parse(utilisateur).id;
-
-        const voiture = localStorage?.getItem("voiture");
-        if(voiture === null) location?.replace("/voitures/ajouter");
-        // @ts-ignore
-        data.sortieVoiture = JSON.parse(voiture).id;
-
-        const response = await sendPost(API_URL+"voitures", data);
+        const response = await sendPut(API_URL+"voitures/"+params.get("id"), data);
         btn.target.classList.remove("btn-loading");
 
         if (response != null) {
@@ -60,9 +38,9 @@ export default function AjouterVoiture() {
 
     return (
         <ClientOnly>
-            <SubBanner titre="Ajouter une voiture" />
+            <SubBanner titre="Modifier une voiture" />
 
-            {(etatVoitures && couleurs) ?
+            {(data && etatVoitures && couleurs) ?
             <div className="car-list-fullwidth content-area-2">
                 <div className="container">
                     <div className="row">
@@ -70,10 +48,6 @@ export default function AjouterVoiture() {
 
                             <div className="card">
                                 <div className="card-header">
-                                    <a href={`/voitures/ajouter${URL_EXTENSION}`} className="btn btn-sm btn-secondary mx-2">
-                                        Retour
-                                        <span className="fa fa-arrow-left mx-2"></span>
-                                    </a>
                                     <a href={`/voitures${URL_EXTENSION}`} className="btn btn-sm btn-primary mx-2">
                                         Mes voitures
                                         <span className="fa fa-car mx-2"></span>
@@ -85,6 +59,7 @@ export default function AjouterVoiture() {
                                         <div className="form-group col-6">
                                             <label className="form-label">Kilométrage (km)</label>
                                             <input type="number" className="form-control" min={0} placeholder="50000"
+                                                   value={data.kilometrage}
                                                    onChange={e =>
                                                        setData({...data, kilometrage: e.target.value})}/>
                                         </div>
@@ -92,6 +67,7 @@ export default function AjouterVoiture() {
                                         <div className="form-group col-6">
                                             <label className="form-label">Kilométrage vidange (km)</label>
                                             <input type="number" className="form-control" min={0} placeholder="2000"
+                                                   value={data.kilometrageVidange}
                                                    onChange={e => setData({
                                                        ...data,
                                                        kilometrageVidange: e.target.value
@@ -102,7 +78,7 @@ export default function AjouterVoiture() {
                                     <div className="row mb-3">
                                         <div className="form-group col-6">
                                             <label className="form-label">Etat actuel</label>
-                                            <select className="form-control form-select"
+                                            <select className="form-control form-select" defaultValue={data.etatVoiture}
                                                     onChange={e =>
                                                         setData({...data, etatVoiture: e.target.value})}>
                                                 {etatVoitures.map((etat: any, index: string) => (
@@ -114,6 +90,7 @@ export default function AjouterVoiture() {
                                         <div className="form-group col-6">
                                             <label className="form-label">Première main</label>
                                             <select className="form-control form-select"
+                                                    defaultValue={data.premiereMain}
                                                     onChange={e =>
                                                         setData({...data, premiereMain: e.target.value})}>
                                                 <option value="false">Non</option>
@@ -135,14 +112,15 @@ export default function AjouterVoiture() {
                                                 </div>
                                             </label>
                                             <select className="form-control form-select"
+                                                    defaultValue={`${data.couleur}`}
                                                     onChange={e => {
-                                                        const couleur = e.target.value.split("#");
-                                                        setData({...data, couleur: couleur[0]});
-                                                        setCouleur("#" + couleur[1]);
+                                                        const couleur = couleurs.filter((couleur: any) => couleur.id == e.target.value);
+                                                        setData({...data, couleur: couleur[0].id});
+                                                        setCouleur(couleur[0].codeCouleur);
                                                     }}>
                                                 {couleurs.map((couleur: any, index: string) => (
                                                     <option key={index}
-                                                            value={`${couleur.id}${couleur.codeCouleur}`}>{couleur.nom}</option>
+                                                            value={`${couleur.id}`}>{couleur.nom}</option>
                                                 ))}
                                             </select>
                                         </div>
@@ -153,6 +131,7 @@ export default function AjouterVoiture() {
                                             <label className="form-label">Mise en circulation</label>
                                             <input type="number" className="form-control" min={1900} placeholder={"AAAA"}
                                                    maxLength={4}
+                                                   value={data.miseEnCirculation}
                                                    onChange={e => setData({
                                                        ...data,
                                                        miseEnCirculation: e.target.value
@@ -162,6 +141,7 @@ export default function AjouterVoiture() {
                                         <div className="form-group col-6">
                                             <label className="form-label">Immatriculation</label>
                                             <input type="text" className="form-control" placeholder={"0000AAA"}
+                                                   value={data.immatriculation}
                                                    onChange={e =>
                                                        setData({...data, immatriculation: e.target.value})}/>
                                         </div>
@@ -171,6 +151,7 @@ export default function AjouterVoiture() {
                                         <div className="form-group col-6">
                                             <label className="form-label">Fin assurance</label>
                                             <input type="date" className="form-control"
+                                                   value={data.dateFinAssurance}
                                                    onChange={e => setData({
                                                        ...data, dateFinAssurance: e.target.value
                                                    })}/>
@@ -179,6 +160,7 @@ export default function AjouterVoiture() {
                                         <div className="form-group col-6">
                                             <label className="form-label">Fin contrôle Tech</label>
                                             <input type="date" className="form-control"
+                                                   value={data.dateControleTech}
                                                    onChange={e => setData({
                                                        ...data, dateControleTech: e.target.value
                                                    })}/>
@@ -189,6 +171,7 @@ export default function AjouterVoiture() {
                                         <div className="form-group col-12">
                                             <label className="form-label">Description</label>
                                             <textarea className="form-control" rows={3} placeholder="... a propos"
+                                                      value={data.description}
                                                       onChange={e =>
                                                           setData({...data, description: e.target.value})}/>
                                         </div>
@@ -197,9 +180,9 @@ export default function AjouterVoiture() {
 
                                 </div>
                                 <div className="card-footer d-flex justify-content-end">
-                                    <button className="btn btn-sm btn-success" type="button" onClick={enregistrer}>
-                                        Enregistrer
-                                        <span className="fa fa-save mx-2"></span>
+                                    <button className="btn btn-sm btn-warning" type="button" onClick={enregistrer}>
+                                        Modifier
+                                        <span className="fa fa-edit mx-2"></span>
                                     </button>
                                 </div>
                             </div>

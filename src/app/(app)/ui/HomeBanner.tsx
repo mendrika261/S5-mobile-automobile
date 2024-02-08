@@ -1,7 +1,7 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faAndroid} from "@fortawesome/free-brands-svg-icons";
-import Link from "next/link";
-import {ANDROID_APP_LINK} from "@/app/(app)/info";
+import {LINK_APP_LINK} from "@/app/(app)/info";
+import {URL_EXTENSION} from "@/app/config";
+import {faLink} from "@fortawesome/free-solid-svg-icons";
 
 
 export default function HomeBanner() {
@@ -19,12 +19,12 @@ export default function HomeBanner() {
                                     <p data-animation="animated fadeInUp delay-10s">
                                         Votre guide de confiance pour l&apos;achat et la vente de voitures
                                     </p>
-                                    <Link data-animation="animated fadeInUp delay-10s" href="#homesearch"
-                                       className="btn btn-lg btn-round btn-theme">Commencer</Link>
-                                    <Link data-animation="animated fadeInUp delay-12s" href={ANDROID_APP_LINK}
-                                       className="btn btn-lg btn-round btn-white-lg-outline">Télécharger l&apos;app
-                                        <FontAwesomeIcon icon={faAndroid} className="icon" width="15" height="15" style={{marginLeft: '5px'}}/>
-                                    </Link>
+                                    <a data-animation="animated fadeInUp delay-10s" href={"/connexion"+URL_EXTENSION}
+                                       className="btn btn-lg btn-round btn-theme">Commencer</a>
+                                    <a data-animation="animated fadeInUp delay-12s" href={LINK_APP_LINK}
+                                       className="btn btn-lg btn-round btn-white-lg-outline">Aller sur le site
+                                        <FontAwesomeIcon icon={faLink} className="icon" width="15" height="15" style={{marginLeft: '5px'}}/>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -39,12 +39,13 @@ export default function HomeBanner() {
                                     <p data-animation="animated fadeInUp delay-10s">
                                         Mettre votre annonce ou rechercher une voiture
                                     </p>
-                                    <Link data-animation="animated fadeInUp delay-10s" href="#homesearch"
-                                          className="btn btn-lg btn-round btn-theme">Commencer</Link>
-                                    <Link data-animation="animated fadeInUp delay-12s" href={ANDROID_APP_LINK}
-                                          className="btn btn-lg btn-round btn-white-lg-outline">Télécharger l&apos;app
-                                        <FontAwesomeIcon icon={faAndroid} className="icon" width="15" height="15" style={{marginLeft: '5px'}}/>
-                                    </Link>
+                                    <a data-animation="animated fadeInUp delay-10s" href={"/connexion" + URL_EXTENSION}
+                                       className="btn btn-lg btn-round btn-theme">Commencer</a>
+                                    <a data-animation="animated fadeInUp delay-12s" href={LINK_APP_LINK}
+                                       className="btn btn-lg btn-round btn-white-lg-outline">Aller sur le site
+                                        <FontAwesomeIcon icon={faLink} className="icon" width="15" height="15"
+                                                         style={{marginLeft: '5px'}}/>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -56,12 +57,13 @@ export default function HomeBanner() {
                                 <div className="text-left max-w">
                                     <h3 data-animation="animated fadeInDown delay-05s">Sans frais <br/> pour
                                         votre achat</h3>
-                                    <Link data-animation="animated fadeInUp delay-10s" href="#homesearch"
-                                          className="btn btn-lg btn-round btn-theme">Commencer</Link>
-                                    <Link data-animation="animated fadeInUp delay-12s" href={ANDROID_APP_LINK}
-                                          className="btn btn-lg btn-round btn-white-lg-outline">Télécharger l&apos;app
-                                        <FontAwesomeIcon icon={faAndroid} className="icon" width="15" height="15" style={{marginLeft: '5px'}}/>
-                                    </Link>
+                                    <a data-animation="animated fadeInUp delay-10s" href={"/connexion" + URL_EXTENSION}
+                                       className="btn btn-lg btn-round btn-theme">Commencer</a>
+                                    <a data-animation="animated fadeInUp delay-12s" href={LINK_APP_LINK}
+                                       className="btn btn-lg btn-round btn-white-lg-outline">Aller sur le site
+                                        <FontAwesomeIcon icon={faLink} className="icon" width="15" height="15"
+                                                         style={{marginLeft: '5px'}}/>
+                                    </a>
                                 </div>
                             </div>
                         </div>

@@ -30,11 +30,12 @@ export default function AjouteAnnonce() {
 
                             <div className="card">
                                 <div className="card-header">
-                                    <a href={`/mes-annonces${URL_EXTENSION}`} className="btn btn-sm btn-secondary mx-2">
-                                        Retour
+                                    <a href={`/mes-annonces${URL_EXTENSION}`} className="btn btn-icon btn-sm btn-secondary mx-2">
+                                        <span className="fa fa-arrow-left"></span>
                                     </a>
                                     <a href={`/voitures/ajouter${URL_EXTENSION}`} className="btn btn-sm btn-primary mx-2">
                                         Ajouter une voiture
+                                        <span className="fa fa-plus ml-2"></span>
                                     </a>
                                 </div>
                                 <div className="card-body">
@@ -65,7 +66,10 @@ export default function AjouteAnnonce() {
                                 </div>
 
                                 <div className="card-footer d-flex justify-content-end">
-                                    <button className="btn btn-sm btn-success" onClick={envoyer}>Envoyer</button>
+                                    <button className="btn btn-sm btn-success" onClick={envoyer}>
+                                        Envoyer
+                                        <span className="fa fa-paper-plane mx-2"></span>
+                                    </button>
                                 </div>
                             </div>
 

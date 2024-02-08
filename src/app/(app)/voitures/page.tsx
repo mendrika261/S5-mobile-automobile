@@ -31,6 +31,7 @@ export default function ListeVoiture() {
                                 <div className="col-12">
                                     <a href={`/voitures/ajouter${URL_EXTENSION}`} className="btn btn-md btn-theme col-12">
                                         Ajouter une voiture
+                                        <span className="fa fa-plus mx-2"></span>
                                     </a>
                                 </div>
                             </div>

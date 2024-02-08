@@ -1,19 +1,19 @@
+"use client";
+
 import ClientOnly from "@/app/(app)/ui/ClientOnly";
 import HomeBanner from "@/app/(app)/ui/HomeBanner";
-import HomeSearch from "@/app/(app)/ui/HomeSearch";
-import HomeApp from "@/app/(app)/ui/HomeApp";
-import HomeLatest from "@/app/(app)/ui/HomeLastest";
-import HomeDeveloper from "@/app/(app)/ui/HomeDeveloper";
-
+import {useEffect} from "react";
+import {URL_EXTENSION} from "@/app/config";
 
 export default function Home() {
+    useEffect(() => {
+        if(localStorage?.getItem("token") != null) {
+            location?.replace("/mes-annonces"+URL_EXTENSION);
+        }
+    }, []);
   return (
       <ClientOnly>
           <HomeBanner />
-          <HomeSearch />
-          <HomeApp />
-          <HomeLatest />
-          <HomeDeveloper />
       </ClientOnly>
     )
 }

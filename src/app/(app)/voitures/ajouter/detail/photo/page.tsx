@@ -46,7 +46,7 @@ export default function AjouterVoiture() {
         data.photos = data.photos.filter((photo: any) => photo.id != photoId).map((photo: any) => photo.id);
         const response = await sendPut(API_URL + 'voitures/'+params.get("id"), data);
         if(response != null) {
-            //await remove_file(lien);
+            await remove_file(lien);
             location?.reload();
         }
     }
@@ -65,10 +65,14 @@ export default function AjouterVoiture() {
                                 <div className="card-header">
                                     <a href={`/voitures${URL_EXTENSION}`} className="btn btn-sm btn-primary mx-2">
                                         Mes voitures
+                                        <span className="fa fa-car mx-2"></span>
                                     </a>
                                 </div>
                                 <div className="card-body">
-                                    <h4 className="heading">Les photos de {dataC.voiture.modele.voiture}</h4>
+                                    <h4 className="heading">
+                                        Les photos de {dataC.sortieVoiture.modele.voiture}
+                                        <span className="fa fa-image mx-2"></span>
+                                    </h4>
                                     <div className="row mb-3">
                                         {dataC.photos.map(async (photo: any, index: number) =><>
                                             <div className="col-sm-10 col-md-3 overflow-hidden mb-2" key={index}>
@@ -93,6 +97,7 @@ export default function AjouterVoiture() {
                                             <button className="btn btn-sm btn-success form-control" type="button"
                                                     onClick={enregistrer}>
                                                 Ajouter
+                                                <span className="fa fa-plus mx-2"></span>
                                             </button>
                                         </div>
                                     </div>
