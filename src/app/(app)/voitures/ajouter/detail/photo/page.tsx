@@ -53,7 +53,7 @@ export default function AjouterVoiture() {
 
     return (
         <ClientOnly>
-            <SubBanner titre="Ajouter une voiture" />
+            <SubBanner titre="Ajouter une photo" />
 
             {(data && dataC) ?
             <div className="car-list-fullwidth content-area-2">
@@ -68,7 +68,7 @@ export default function AjouterVoiture() {
                                     </a>
                                 </div>
                                 <div className="card-body">
-                                    <h4 className="heading">Les photos</h4>
+                                    <h4 className="heading">Les photos de {dataC.voiture.modele.voiture}</h4>
                                     <div className="row mb-3">
                                         {dataC.photos.map(async (photo: any, index: number) =><>
                                             <div className="col-sm-10 col-md-3 overflow-hidden mb-2" key={index}>

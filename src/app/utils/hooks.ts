@@ -15,7 +15,8 @@ const FIREBASE_PREFIX = "fichiers";
 
 async function handleErrors(error: any) {
     if(error.response.status === 401) {
-        deconnexion(API_BASE_URL+"tokens/utilisateur");
+        window?.localStorage?.removeItem('token');
+        window?.localStorage?.removeItem('utilisateur');
         location?.replace('/connexion'+URL_EXTENSION);
         return;
     }
