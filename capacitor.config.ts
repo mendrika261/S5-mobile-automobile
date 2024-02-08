@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'nextjs.boot',
-  appName: 'nextjs-boot',
+  appId: 'mg.itu.fiara',
+  appName: 'Fiara',
   webDir: 'out',
   server: {
     androidScheme: 'https'

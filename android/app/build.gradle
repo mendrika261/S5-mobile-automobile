@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "nextjs.boot"
+    namespace "mg.itu.fiara"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "nextjs.boot"
+        applicationId "mg.itu.fiara"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -1,4 +1,4 @@
-package nextjs.boot;
+package mg.itu.fiara;
 
 import com.getcapacitor.BridgeActivity;
 

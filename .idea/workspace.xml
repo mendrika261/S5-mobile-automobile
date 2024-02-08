@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="feat: push notification annonce">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="f1637166-d2a0-44b2-a2bc-91036f5f9ed0" name="Changes" comment="fix: minor bugs, make android folder versioned">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(app)/voitures/ajouter/detail/photo/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(app)/voitures/ajouter/detail/photo/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/utils/hooks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/utils/hooks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/capacitor.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/capacitor.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +123,7 @@
       <workItem from="1707159803544" duration="8405000" />
       <workItem from="1707200737346" duration="52701000" />
       <workItem from="1707313797161" duration="63000" />
-      <workItem from="1707409102307" duration="2199000" />
+      <workItem from="1707409102307" duration="3970000" />
     </task>
     <task id="LOCAL-00001" summary="feat: template, home page">
       <option name="closed" value="true" />
@@ -191,7 +189,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707306964722</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fix: minor bugs, make android folder versioned">
+      <option name="closed" value="true" />
+      <created>1707412805960</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1707412805960</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +225,7 @@
     <MESSAGE value="feat: liste, ajouter voiture" />
     <MESSAGE value="feat: liste, ajouter annonce, modifier etat" />
     <MESSAGE value="feat: push notification annonce" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: push notification annonce" />
+    <MESSAGE value="fix: minor bugs, make android folder versioned" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: minor bugs, make android folder versioned" />
   </component>
 </project>
